@@ -6,7 +6,8 @@
 
 
 GO_URL="https://storage.googleapis.com/golang"
-GO_VERSION=${1:-"1.7.4"}
+#GO_VERSION=${1:-"1.7.4"}
+GO_VERSION=${1:-"1.8"}
 GO_FILE="go$GO_VERSION.linux-amd64.tar.gz"
 
 
@@ -45,7 +46,8 @@ export PATH=$PATH:$GOPATH/bin' >> /etc/profile
 
 sleep 3
  
-source /etc/profile
+#source /etc/profile
+. /etc/profile
 mkdir -p $HOME/GO
 
 ## Test if Golang is working
