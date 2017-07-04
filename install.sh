@@ -38,17 +38,18 @@ cd /tmp
 wget --no-check-certificate ${GO_URL}/${GO_FILE}
 tar -xzf ${GO_FILE}
 mv go /usr/local/go
+mv /usr/local/go/bin/* /usr/bin/
 
-
-echo 'export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/GO
-export PATH=$PATH:$GOPATH/bin' >> /etc/profile
-
+#echo 'export PATH=$PATH:/usr/local/go/bin
+#export GOPATH=$HOME/GO
+#export PATH=$PATH:$GOPATH/bin' >> /etc/profile
+#/usr/bin/
 sleep 3
  
 #source /etc/profile
-. /etc/profile
-mkdir -p $HOME/GO
+#. /etc/profile
+source ~/.bash_profile
+#mkdir -p $HOME/GO
 
 ## Test if Golang is working
 go version
